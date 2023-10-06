@@ -13,7 +13,7 @@ pipeline {
     }
     stage('scan for issues') {
       steps {
-        sh "$HOME/.spectral/spectral scan --ok  --include-tags base,audit3"
+        sh "$HOME/.spectral/spectral scan --ok --engines secrets,iac,oss --include-tags base,audit3,iac"
       }
     }
     stage('build') {

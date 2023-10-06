@@ -16,11 +16,13 @@ pipeline {
         sh "$HOME/.spectral/spectral scan --ok --engines secrets,iac,oss --include-tags base,audit3,iac"
       }
     }
-    stage('build') {
+/*   
+ stage('build') {
       steps {
         // your build scripts
         sh "./build.sh"
       }
     }
+*/
   }
 }
